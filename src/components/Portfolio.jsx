@@ -52,7 +52,7 @@ const works = [
   {
     id: 6,
     alt: "copertina sito React Quiz",
-    href: "https://silver-starship-5c3671.netlify.app/",
+    href: "https://sweet-churros-996ee4.netlify.app",
     title: "React Quiz",
     src: ReactQuiz,
     gitHub: "https://github.com/DonatelloFantauzzi/reactQuiz",
@@ -87,10 +87,10 @@ const Portfolio = () => {
         animate={mainControls}
         transition={{ duration: 0.5, delay: 0.25 }}
       >
-        <p className=" dark:text-darkPrimary text-center text-lg font-bold text-secondary">
+        <p className=" text-center text-lg font-bold text-secondary dark:text-darkPrimary">
           Esplora il mio
         </p>
-        <h1 className=" dark:text-darkSecondary text-center text-4xl text-primary  md:text-6xl">
+        <h1 className=" text-center text-4xl text-primary dark:text-darkSecondary  md:text-6xl">
           Portfolio
         </h1>
       </motion.div>
@@ -110,7 +110,7 @@ const Portfolio = () => {
           return (
             <div
               key={work.id}
-              className=" dark:shadow-darkPrimary grid grid-rows-[2fr_auto_1fr]  justify-center rounded-lg p-6 shadow-lg shadow-primary "
+              className=" grid grid-rows-[2fr_auto_1fr] justify-center  rounded-lg p-6 shadow-lg shadow-primary dark:shadow-darkPrimary "
             >
               <figure className="flex  items-center justify-center">
                 <img
@@ -120,7 +120,7 @@ const Portfolio = () => {
                   className=" h-full rounded-lg"
                 />
               </figure>
-              <h2 className=" dark:text-darkPrimary my-6 text-center text-2xl text-primary">
+              <h2 className=" my-6 text-center text-2xl text-primary dark:text-darkPrimary">
                 {work.title}
               </h2>
 
@@ -134,7 +134,7 @@ const Portfolio = () => {
                     {/* <FaGithub size={50} color="#f0f6f5" /> */}
                     <FaGithub
                       size={50}
-                      className=" dark:text-darkSecondary text-primary"
+                      className=" text-primary dark:text-darkSecondary"
                     />
                   </button>
                 </a>
@@ -142,7 +142,7 @@ const Portfolio = () => {
                   href={work.href}
                   target="_blank"
                   rel="noreferrer"
-                  className=" dark:text-darkPrimary dark:hover:text-darkSecondary text-xl text-primary duration-300 hover:scale-110 hover:text-secondary"
+                  className=" text-xl text-primary duration-300 hover:scale-110 hover:text-secondary dark:text-darkPrimary dark:hover:text-darkSecondary"
                 >
                   View Live
                 </a>
