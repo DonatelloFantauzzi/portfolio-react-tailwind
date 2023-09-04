@@ -33,6 +33,12 @@ const Nav = () => {
         onSelectMode(e.matches ? "dark" : "light"),
       );
 
+    onSelectMode(
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+        ? "dark"
+        : "light",
+    );
+
     localStorage.getItem("theme")
       ? localStorage.getItem("theme")
       : onSelectMode(
@@ -49,7 +55,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <header className=" dark:bg-darkBackground mb-12 bg-background">
+    <header className=" mb-12 bg-background dark:bg-darkBackground">
       <nav className=" mx-auto flex max-w-7xl items-center justify-between  p-10 md:justify-around">
         <div onClick={() => setOpenMenu(!openMenu)} className="z-50 md:hidden">
           {openMenu ? (
