@@ -12,15 +12,15 @@ import { motion, useAnimation, useInView } from "framer-motion";
 // import { useEffect, useRef } from "react";
 
 function App() {
-  // if (
-  //   localStorage.theme === "dark" ||
-  //   (!("theme" in localStorage) &&
-  //     window.matchMedia("(prefers-color-scheme: dark)").matches)
-  // ) {
-  //   document.documentElement.classList.add("dark");
-  // } else {
-  //   document.documentElement.classList.remove("dark");
-  // }
+  if (
+    localStorage.theme === "dark" ||
+    (!("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    document.documentElement.classList.add("dark");
+  } else {
+    document.documentElement.classList.remove("dark");
+  }
 
   // const ref = useRef(null);
   // const isInView = useInView(ref, { once: true }, { treshold: 1 });

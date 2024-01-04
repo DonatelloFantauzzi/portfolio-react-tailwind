@@ -4,6 +4,7 @@ import Git from "../image/git-svgrepo-com.svg";
 import JavaScript from "../image/js-svgrepo-com.svg";
 import React from "../image/react-svgrepo-com.svg";
 import Tailwind from "../image/tailwind-css-icon.svg";
+import Sass from "../image/image.png";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -22,27 +23,33 @@ const tecs = [
   },
   {
     id: 3,
+    title: "Sass",
+    src: Sass,
+    style: "shadow-[#ce679a]",
+  },
+  {
+    id: 4,
+    title: "Tailwind",
+    src: Tailwind,
+    style: "shadow-[rgb(6,182,212)]",
+  },
+  {
+    id: 5,
     title: "Git",
     src: Git,
     style: "shadow-[#ee513b]",
   },
   {
-    id: 4,
+    id: 6,
     title: "JavaScript",
     src: JavaScript,
     style: "shadow-[#ffca28]",
   },
   {
-    id: 5,
+    id: 7,
     title: "React",
     src: React,
     style: "shadow-[#00d8ff]",
-  },
-  {
-    id: 6,
-    title: "Tailwind",
-    src: Tailwind,
-    style: "shadow-[rgb(6,182,212)]",
   },
 ];
 
@@ -63,7 +70,7 @@ const Skills = () => {
     <>
       <section
         id="skills"
-        className=" dark:bg-darkBackground relative mx-auto mb-28 flex h-full max-w-7xl flex-col bg-background p-8   md:justify-evenly "
+        className=" relative mx-auto mb-28 flex h-full max-w-7xl flex-col bg-background p-8 dark:bg-darkBackground   md:justify-evenly "
       >
         <motion.div
           ref={ref}
@@ -75,10 +82,10 @@ const Skills = () => {
           animate={mainControls}
           transition={{ duration: 0.5, delay: 0.25 }}
         >
-          <p className=" dark:text-darkPrimary text-center text-lg font-bold text-secondary">
+          <p className=" text-center text-lg font-bold text-secondary dark:text-darkPrimary">
             Ecco le mie
           </p>
-          <h1 className=" dark:text-darkSecondary text-center text-4xl text-primary  md:text-6xl">
+          <h1 className=" text-center text-4xl text-primary dark:text-darkSecondary  md:text-6xl">
             Top Skills
           </h1>
         </motion.div>
@@ -101,16 +108,16 @@ const Skills = () => {
                 className={`${tec.style} dark:${tec.style} flex flex-col items-center justify-center rounded-lg py-2 shadow-lg`}
               >
                 <figure
-                  className={`dark:bg-darkBackground flex h-full w-[90%] flex-col  items-center justify-center bg-background `}
+                  className={`flex h-full w-[90%] flex-col items-center  justify-center bg-background dark:bg-darkBackground `}
                 >
                   <img
                     src={tec.src}
                     alt={tec.title}
                     loading="lazy"
-                    className=" dark:bg-darkBackground mx-auto w-24 bg-background"
+                    className=" mx-auto w-24 bg-background dark:bg-darkBackground"
                   />
                 </figure>
-                <p className=" dark:text-darkPrimary text-center text-lg text-primary">
+                <p className=" text-center text-lg text-primary dark:text-darkPrimary">
                   {tec.title}
                 </p>
               </div>

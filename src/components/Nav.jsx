@@ -33,12 +33,6 @@ const Nav = () => {
         onSelectMode(e.matches ? "dark" : "light"),
       );
 
-    onSelectMode(
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light",
-    );
-
     localStorage.getItem("theme")
       ? localStorage.getItem("theme")
       : onSelectMode(
@@ -47,10 +41,18 @@ const Nav = () => {
             : "light",
         );
 
+    // onSelectMode(
+    //   window.matchMedia("(prefers-color-scheme: dark)").matches
+    //     ? "dark"
+    //     : "light",
+    // );
+
     return () => {
       window
         .matchMedia("(prefers-color-scheme: dark)")
         .removeEventListener("change", () => {});
+
+      localStorage.removeItem("theme");
     };
   }, []);
 
