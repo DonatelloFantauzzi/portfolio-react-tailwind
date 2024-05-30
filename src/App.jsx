@@ -75,7 +75,7 @@ function App() {
         className="mx-auto w-56 dark:rounded-[50%] dark:border-[7px]  dark:border-darkSecondary md:w-[20rem] lg:w-[24rem]"
       />
 
-      <Contatti />
+      {/* <Contatti /> */}
       <Footer />
       {/* </motion.div> */}
     </main>
